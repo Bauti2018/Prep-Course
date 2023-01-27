@@ -156,12 +156,27 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
+  
+  for (var i = 0; i <= (numero / 2); i++){
+    if (numero == 0 || (numero == 1)){
+      return false
+    }else if (numero % i == 0 && (i != 1) && i!= numero){
+        return false
+    }else
+        esPrimo = true
+  }
+  if (esPrimo == true)
+    return true 
 }
 
 function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
-  //Escribe tu código aquí
+  //Escribe tu código aqui
+  if (valor == true)
+    return 'Soy verdadero'
+  else if (valor == false)
+    return 'Soy falso'
 
 }
 
@@ -175,6 +190,10 @@ function tablaDelSeis(){
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
+  if(numero >= 100 && numero < 1000)
+    return true
+  else 
+    return false
 }
 
 function doWhile(numero) {
